@@ -3,8 +3,6 @@ class Solution {
         if(n<=0){
             return false;
         }
-        /*int res=(int)(Math.log(n)/Math.log(2));
-        return Math.pow(2,res)==n;*/
      while(n%2==0){
         n/=2;
      }
