@@ -15,10 +15,6 @@ class Solution {
         }else{
            sum=a[m];
         }
-        System.out.println(n+" "+m+" "+sum);
-        for(int i=0;i<n;i++){
-            System.out.println(a[i]);
-        }
         return sum;
     }
 }
