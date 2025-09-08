@@ -5,32 +5,18 @@ class Solution {
              if(nums[right]==0){
                count++;
             }
-             if(count<=k){
+            while(count>k){
+                if(nums[left]==0){
+                       count--;
+                }
+                       left++;
+                }
+                 if(count<=k){
                sum=Math.max(sum,right-left+1);
-            }else{
-                right=left;
-                left++;
-                count=0;
             }
             right++;
         }
         
         return sum;
     }
-    /*if(k>=nums.length){
-            return nums.length;
-        }
-        for(int left=0;left<nums.length;left++){
-            int count=0;
-            for(int right=left;right<nums.length;right++){
-            if(nums[right]==0){
-               count++;
-            }
-            if(count<=k){
-               sum=Math.max(sum,right-left+1);
-            }else{
-                break;
-            }
-            }
-        }*/
 }
