@@ -9,13 +9,13 @@ class Solution {
                  int changes=(right-left+1)-maxfreq;
                   if(changes<=k){
                     maxlen=Math.max(maxlen,right-left+1);
-                 }else{
+                 }
+                 else{
                     l1.put(s.charAt(left),l1.get(s.charAt(left))-1);
                     if(l1.get(s.charAt(left))==0){
                         l1.remove(s.charAt(left));
                     }
                     left++;
-                    
                  }
              right++;
         }
