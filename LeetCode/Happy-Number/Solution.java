@@ -1,11 +1,9 @@
 class Solution {
     public boolean isHappy(int n) {
-        boolean val=false;
         if(happy(n)){
-            val=true;
-            return val;
+            return true;
         }
-        return val;
+        return false;
     }
      public static boolean happy(int num){
        HashSet<Integer> l=new HashSet<>();
