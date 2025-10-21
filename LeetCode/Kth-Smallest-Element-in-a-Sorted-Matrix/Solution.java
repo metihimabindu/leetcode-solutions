@@ -7,7 +7,6 @@ class Solution {
             }
         }
         Collections.sort(l1);
-        System.out.println(l1);
         return l1.get(k-1);
     }
 }
