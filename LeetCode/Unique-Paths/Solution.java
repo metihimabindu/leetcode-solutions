@@ -1,15 +1,14 @@
 class Solution {
     public int uniquePaths(int m, int n) {
         int [][]dp=new int[m][n];
-        for(int i=0;i<m;i++)Arrays.fill(dp[i],-1);
-        return back(m,n,m-1,n-1,dp);
-    }
-    public static int back(int m,int n,int i,int j,int [][]dp){
-        if(i==0 && j==0){return 1;}
-        if(i<0 || j<0){return 0;}
-        if(dp[i][j]!=-1){return dp[i][j];}
-        int left=back(m,n,i-1,j,dp);
-        int right=back(m,n,i,j-1,dp);
-        return dp[i][j]=left+right;
+        
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+        if(i==0 && j==0){ dp[i][j]=1;}
+        else{int up=0,down=0;
+            if(i>0){up=dp[i-1][j];}
+        if(j>0){down=dp[i][j-1];}
+         dp[i][j]=up+down;}}}
+         return dp[m-1][n-1];
     }
 }
