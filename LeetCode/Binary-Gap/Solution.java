@@ -1,15 +1,19 @@
-class Solution {
-    public int binaryGap(int n) {
-        String str=Integer.toBinaryString(n);
-        int left=0,right=0,max=0,res=0;
-        while(right<str.length()){
-            if(str.charAt(right)=='1'){
-                max=Math.max(max,right-res);
-                res=right;
+public int binaryGap(int N) {
+    int temp=0,cnt=-1,large=0;
+    while(N!=0)
+    {
+        temp=N%2;
+        if(cnt>=0) cnt++;
+        if(temp==1)
+        { 
+            if(cnt>0)
+            {
+               large=cnt>large?cnt:large; 
             }
-            right++;
+            cnt=0;
         }
-        System.out.println(str);
-        return max;
+       
+        N/=2;
     }
+    return large;
 }
